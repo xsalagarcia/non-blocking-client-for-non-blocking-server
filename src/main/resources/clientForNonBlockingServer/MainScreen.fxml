@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientForNonBlockingServer.MainScreenController">
+   <children>
+      <BorderPane prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="getAllUsers" mnemonicParsing="false" prefWidth="150.0" text="Refresh Users" />
+                  <ComboBox fx:id="usersCB" prefWidth="150.0" />
+                  <Button fx:id="disconnect" mnemonicParsing="false" prefWidth="150.0" text="Disconnect" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane maxWidth="1.7976931348623157E308" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="textArea" maxWidth="1.7976931348623157E308" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <HBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label text="Port" />
+                        <TextField fx:id="port" />
+                        <Button fx:id="sendParameters" mnemonicParsing="false" text="Connect" />
+                        <Label text="User name">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="userName" />
+                        <Label text="Password">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <PasswordField fx:id="password" />
+                        <Button fx:id="logIn" mnemonicParsing="false" text="Log in" />
+                        <Button fx:id="newUser" mnemonicParsing="false" text="New User">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="textToSend" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="4000.0" />
+                        <Button fx:id="sendTextToSend" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Send" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
